@@ -2,7 +2,7 @@
   "name": "ast-to-entity-definitions",
   "version": "1.0.7",
   "description": "",
-  "main": "dist/index.js",
+  "main": "src/adapter/entiry-points/function/index.ts",
   "scripts": {
     "prettier": "prettier --write '**/*'",
     "lint": "eslint src",
@@ -10,7 +10,8 @@
     "format": "npm run prettier && npm run lint-fix",
     "build": "tsc -p ./tsconfig.build.json",
     "start": "node dist/index.js",
-    "test": "jest ./src"
+    "_test": "jest -e",
+    "test": "npm run _test ./src"
   },
   "bin": {
     "ast-to-entity-definitions": "./bin/adapter/entry-points/cli/index.js"
